@@ -72,7 +72,63 @@ class HomePage extends StatelessWidget {
                         label: Text("email"),
                         border: OutlineInputBorder(),
                         hintText: "someone123@gamil.com"),
-                  )
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [Icon(Icons.abc_outlined), Text("Row widget")],
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  const Text("Network image"),
+                  //using image constracotr
+                  Image.network(
+                      "https://i.pinimg.com/200x150/62/8e/65/628e65258c534a60ff59a30890ca63f5.jpg",
+                      height: 100,
+                      fit: BoxFit.contain),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  const Text("assests image"),
+                  Image.asset(
+                    "assests/images/car2.jpg",
+                    fit: BoxFit.cover,
+                    height: 100,
+                    width: 250,
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ), //using image provider
+                  const Image(
+                    image: NetworkImage(
+                      "https://images.unsplash.com/photo-1643808972401-4111e3a73b17?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    ),
+                    height: 100,
+                    width: 250,
+                    fit: BoxFit.cover,
+                  ),
+                  const Text("container"),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: const NetworkImage(
+                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7z-Sk5lMpv5hfYULNOJxOw3MSpFeGUKAUn0xSfeErUrrVOBAs2C31l1jm6jbyS0LbxLE&usqp=CAU"),
+                          fit: BoxFit.cover,
+                          colorFilter: ColorFilter.mode(
+                              Colors.black.withOpacity(0.2), BlendMode.darken),
+                        ),
+                        color: Colors.orange,
+                        borderRadius: BorderRadius.circular(20)),
+                    child: const Center(
+                        child: Column(
+                      children: [Text("car"), Text("black")],
+                    )),
+                  ),
                 ],
               ),
             ),
